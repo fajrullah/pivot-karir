@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PivotKarir AI - Profile Matcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🚀 PivotKarir AI</h1>
+            <p class="subtitle">AI-Powered LinkedIn Profile Matching</p>
+        </header>
+
+        <!-- Info Box -->
+        <div class="info-box">
+            <strong>How it works:</strong> Upload your profile and two recruiter profiles.
+            Our AI will analyze and score how well each recruiter matches your career goals.
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <h2>📁 Upload Profiles</h2>
+
+            <div class="file-input-group">
+                <label for="myProfile">
+                    <span class="label-icon">👤</span>
+                    <span class="label-text">Your Profile (profile.json)</span>
+                </label>
+                <input type="file" id="myProfile" accept=".json">
+                <span class="file-name" id="myProfileName">No file selected</span>
+            </div>
+
+            <div class="file-input-group">
+                <label for="recruiter1">
+                    <span class="label-icon">🎯</span>
+                    <span class="label-text">Recruiter 1 (recruiter_matched.json)</span>
+                </label>
+                <input type="file" id="recruiter1" accept=".json">
+                <span class="file-name" id="recruiter1Name">No file selected</span>
+            </div>
+
+            <div class="file-input-group">
+                <label for="recruiter2">
+                    <span class="label-icon">🎯</span>
+                    <span class="label-text">Recruiter 2 (recruiter_not_matched.json)</span>
+                </label>
+                <input type="file" id="recruiter2" accept=".json">
+                <span class="file-name" id="recruiter2Name">No file selected</span>
+            </div>
+        </div>
+
+        <!-- Compare Button -->
+        <button id="compareBtn" class="compare-btn" disabled>
+            🔍 Compare Profiles
+        </button>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading AI model and analyzing profiles...</p>
+            <p class="loading-note">First load may take 10-30 seconds</p>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="results">
+            <h2>📊 Match Results</h2>
+            <div id="resultsContent"></div>
+        </div>
+
+        <!-- Tech Info -->
+        <div class="tech-info">
+            <p><strong>🧠 Tech Stack:</strong> Vanilla JavaScript + Transformers.js + all-MiniLM-L6-v2</p>
+            <p><strong>🔒 Privacy:</strong> All processing happens in your browser. No data is sent to any server.</p>
+        </div>
+    </div>
+
+    <!-- Load JavaScript -->
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
